@@ -17,35 +17,66 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <rect key="frame" x="0.0" y="0.0" width="736" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cloud_sm" translatesAutoresizingMaskIntoConstraints="NO" id="Lc0-cV-MMH"/>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="acT-64-9Go">
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Armenia, Quindío" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kPe-vp-TpC">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Armenia, Quindío" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.59999999999999998" translatesAutoresizingMaskIntoConstraints="NO" id="kPe-vp-TpC">
                                         <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="60"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
+                                        <variation key="widthClass=compact">
+                                            <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="31"/>
+                                        </variation>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="24°C" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aUW-Rs-Q2L">
-                                        <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="77"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="24°C" textAlignment="center" lineBreakMode="tailTruncation" minimumScaleFactor="0.29999999999999999" translatesAutoresizingMaskIntoConstraints="NO" id="aUW-Rs-Q2L">
+                                        <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="250"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
+                                        <variation key="heightClass=compact-widthClass=regular">
+                                            <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="75"/>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=compact">
+                                            <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="114"/>
+                                        </variation>
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <constraints>
                                     <constraint firstItem="kPe-vp-TpC" firstAttribute="centerX" secondItem="acT-64-9Go" secondAttribute="centerX" id="0w7-VF-XtM"/>
+                                    <constraint firstItem="aUW-Rs-Q2L" firstAttribute="width" secondItem="acT-64-9Go" secondAttribute="width" multiplier="0.9" id="AO4-1u-bmv"/>
                                     <constraint firstItem="aUW-Rs-Q2L" firstAttribute="top" secondItem="kPe-vp-TpC" secondAttribute="bottom" constant="24" id="HF7-Is-8hq"/>
                                     <constraint firstItem="kPe-vp-TpC" firstAttribute="top" secondItem="acT-64-9Go" secondAttribute="topMargin" constant="16" id="RCr-UE-pxC"/>
+                                    <constraint firstItem="kPe-vp-TpC" firstAttribute="width" secondItem="acT-64-9Go" secondAttribute="width" multiplier="0.9" id="RVJ-VL-Ohe"/>
+                                    <constraint firstItem="aUW-Rs-Q2L" firstAttribute="centerY" secondItem="acT-64-9Go" secondAttribute="centerY" id="aiJ-nC-zp3"/>
+                                    <constraint firstItem="aUW-Rs-Q2L" firstAttribute="centerY" secondItem="acT-64-9Go" secondAttribute="centerY" id="oky-cp-uQU"/>
                                     <constraint firstItem="aUW-Rs-Q2L" firstAttribute="centerX" secondItem="acT-64-9Go" secondAttribute="centerX" id="rbP-xz-PD3"/>
                                 </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="aiJ-nC-zp3"/>
+                                        <exclude reference="oky-cp-uQU"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=compact-widthClass=compact">
+                                    <mask key="constraints">
+                                        <exclude reference="HF7-Is-8hq"/>
+                                        <include reference="aiJ-nC-zp3"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <mask key="constraints">
+                                        <exclude reference="HF7-Is-8hq"/>
+                                        <include reference="oky-cp-uQU"/>
+                                    </mask>
+                                </variation>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="0.34641822908902392" green="0.7307117481312928" blue="0.93956444299999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="Lc0-cV-MMH" firstAttribute="height" relation="lessThanOrEqual" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.4" id="8tn-Tn-zym"/>
+                            <constraint firstItem="Lc0-cV-MMH" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.4" id="8tn-Tn-zym"/>
                             <constraint firstItem="Lc0-cV-MMH" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.45" id="Cpb-KP-P5p"/>
                             <constraint firstItem="acT-64-9Go" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="MGH-vm-YRz"/>
                             <constraint firstItem="acT-64-9Go" firstAttribute="top" secondItem="Lc0-cV-MMH" secondAttribute="bottom" constant="30" id="NaV-MX-ACV"/>
